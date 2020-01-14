@@ -49,14 +49,13 @@ ctaText.textContent = siteContent['cta']['h1'];
 
 let ctaBtn =document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
-  //  ctaText.setAttribute('h1', siteContent['cta']['h1']);
-  // let myNav = document.getElementsByTagName('a');
+
   let myNav =
   document.querySelectorAll('a');
    myNav.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index++}`]);
-  //   el.textContent = siteContent['nav'];
+  
  
-   myNav.forEach(item => item.style.color='black');
+
 
   
    
@@ -76,10 +75,6 @@ bottomConH[2].textContent = siteContent['main-content']['services-h4'];
 bottomConH[3].textContent = siteContent['main-content']['product-h4'];
 bottomConH[4].textContent = siteContent['main-content']['vision-h4'];
 
-let bottomHfirst = document.getElementsByClassName('.firstH');
-   bottomHfirst.textContent = siteContent['main-content']['features-h4'];
-  let bottomSecond = document.getElementsByClassName('.firstH');
-  bottomSecond.textContent = siteContent['main-content']['about-h4'];
 
 
 console.log(bottomConH);
