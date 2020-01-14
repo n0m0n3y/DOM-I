@@ -51,21 +51,54 @@ let ctaBtn =document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
   //  ctaText.setAttribute('h1', siteContent['cta']['h1']);
   // let myNav = document.getElementsByTagName('a');
-  const myNav =
+  let myNav =
   document.querySelectorAll('a');
-  // myNav.forEach(el => {
+   myNav.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index++}`]);
   //   el.textContent = siteContent['nav'];
-  // }); 
-   myNav.textContent = siteContent['nav'];
-   Array.from(myNav);
-   myNav[0].textContent = "Services";
-   myNav[1].textContent = "Product";
-   myNav[2].textContent = "Vision";
-   myNav[3].textContent = "Features";
-   myNav[4].textContent = "About";
-   myNav[5].textContent = "Contact";
+ 
+   myNav.forEach(item => item.style.color='black');
+
+  
    
 
+
 // console.log(myNav);
-  
+let mainConImg = document.getElementById("middle-img");
+mainConImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+let bottomConH = document.querySelectorAll('h4');
+
+bottomConH[0].textContent = siteContent['main-content']['features-h4'];
+bottomConH[1].textContent = siteContent['main-content']['about-h4'];
+bottomConH[2].textContent = siteContent['main-content']['services-h4'];
+bottomConH[3].textContent = siteContent['main-content']['product-h4'];
+bottomConH[4].textContent = siteContent['main-content']['vision-h4'];
+
+let bottomHfirst = document.getElementsByClassName('.firstH');
+   bottomHfirst.textContent = siteContent['main-content']['features-h4'];
+  let bottomSecond = document.getElementsByClassName('.firstH');
+  bottomSecond.textContent = siteContent['main-content']['about-h4'];
+
+
+console.log(bottomConH);
+
+let bottomConP = document.querySelectorAll('p');
+bottomConP[0].textContent = siteContent['main-content']['features-content'];
+bottomConP[1].textContent = siteContent['main-content']['about-content'];
+bottomConP[2].textContent = siteContent['main-content']['services-content'];
+bottomConP[3].textContent = siteContent['main-content']['product-content'];
+bottomConP[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+bottomConP[5].textContent = siteContent['contact']['address'];
+bottomConP[6].textContent = siteContent['contact']['phone'];
+bottomConP[7].textContent = siteContent['contact']['email'];
+
+bottomConP[8].textContent = siteContent['footer']['copyright'];
+
+
+
 
